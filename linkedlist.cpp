@@ -135,10 +135,6 @@ int countNode(){
     }
     return count;
 }
-void headAddress(){
-    cout<<"Head : "<<head<<endl;
-}
-
 int main(){
     init();
     while(true){
