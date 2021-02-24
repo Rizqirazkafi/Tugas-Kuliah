@@ -63,6 +63,7 @@ void autoPush(unsigned long int nim,string nama,string jurusan){
                     temp->next = next;
                 } else {
                     /*
+                    ! BUG / Error
                     ! jika memasukkan nim yang sama nim yang baru akan menjadi nim terakhir dan menghapus
                     ! semua data setelahnya
                     */
@@ -84,7 +85,7 @@ void print(){
     cout<<" | this : "<<temp<<" | NIM : "<<temp->nim<<" | Nama : "<<temp->nama<<" | Jurusan : "<<temp->jurusan<<" | next : "<<temp->next<<endl;
 }
 /*
-! BUG
+! BUG / Error
 ! 1. menghapus nim yang tidak ada menyebabkan error (segmentation fault)
 ! 2. jika mencoba menghapus satu satu nya nim menyebabkan error (segmentation fault)
 */
