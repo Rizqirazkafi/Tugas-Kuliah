@@ -5,6 +5,8 @@ using namespace std;
 // 2. Menghapus data mahasiswa dengan nim tertentu dari list
 // 3. Mencetak data mahasiswa
 
+//TODO : fix error
+
 struct Node{
     long int nim;
     string nama;
@@ -81,7 +83,6 @@ void print(){
     }
     cout<<" | this : "<<temp<<" | NIM : "<<temp->nim<<" | Nama : "<<temp->nama<<" | Jurusan : "<<temp->jurusan<<" | next : "<<temp->next<<endl;
 }
-//TODO : make it better
 /*
 ! BUG
 ! 1. menghapus nim yang tidak ada menyebabkan error (segmentation fault)
