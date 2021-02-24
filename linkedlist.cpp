@@ -1,9 +1,9 @@
 #include<iostream>
 using namespace std;
 
-// 1. Memasukkan data mahasiswa kedalam list urut nim (make node + insert end) v
-// 2. Menghapus data mahasiswa dengan nim tertentu dari list (delete node)
-// 3. Mencetak data mahasiswa (print all node) v
+// 1. Memasukkan data mahasiswa kedalam list urut nim
+// 2. Menghapus data mahasiswa dengan nim tertentu dari list
+// 3. Mencetak data mahasiswa
 
 struct Node{
     long int nim;
@@ -83,7 +83,7 @@ void print(){
 /*
 ! BUG
 ! 1. menghapus nim yang tidak ada menyebabkan error (segmentation fault)
-! 2. menghapus nim terakhir menyebabkan error (segmentation fault)
+! 2. jika mencoba menghapus satu satu nya nim menyebabkan error (segmentation fault)
 */
 void deleteNIM(long int nim){
     Node* prev = head;
@@ -94,7 +94,7 @@ void deleteNIM(long int nim){
         cout<<"Data Kosong"<<endl;
     } else {
         cout<<"inside else"<<endl;
-        if(head->nim == nim){ //! head delete if only one data is error
+        if(head->nim == nim){
             if(head->next != NULL){
                 delete head;
                 head = temp; //! <--- error ?
@@ -176,6 +176,7 @@ int main(){
     }
 }
 
+// ============== abaikan ===================
 /*
 void deleteNIM(unsigned int nim){
     Node* temp = new Node;
