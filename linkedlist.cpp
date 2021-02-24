@@ -60,8 +60,10 @@ void autoPush(unsigned long int nim,string nama,string jurusan){
                     prev->next = temp;
                     temp->next = next;
                 } else {
-                    //! jika memasukkan nim yang sama nim yang baru akan menjadi nim terakhir dan menghapus
-                    //! semua data setelahnya
+                    /*
+                    ! jika memasukkan nim yang sama nim yang baru akan menjadi nim terakhir dan menghapus
+                    ! semua data setelahnya
+                    */
                     cout<<"insert : "<<temp->nim<<"next : "<<next->nim<<endl;
                     cout<<"Insert last"<<endl;
                     next->next = temp;
